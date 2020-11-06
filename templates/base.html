@@ -26,12 +26,13 @@
 
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
-                <li class="nav__item"><a href="#inicio" class="nav__link active">Inicio</a></li>
-                <li class="nav__item"><a href="/Web y Mobile/GoddessNut/paginas/productos.html" class="nav__link">Productos</a></li>
-                <li class="nav__item"><a href="/Web y Mobile/GoddessNut/paginas/estilo.html" class="nav__link">Estilos</a></li>
-                <li class="nav__item"><a href="/Web y Mobile/GoddessNut/paginas/accesorios.html" class="nav__link">Accesorios</a></li>
+                <li class="nav__item"><a href="{% url 'index' %}" class="nav__link active">Inicio</a></li>
+                <li class="nav__item"><a href="{% url 'productos' %}" class="nav__link">Productos</a></li>
+                <li class="nav__item"><a href="{% url 'estilo' %}" class="nav__link">Estilos</a></li>
+                <li class="nav__item"><a href="{% url 'productos' %}" class="nav__link">Accesorios</a></li>
                 <li class="nav__item"><a href="/Web y Mobile/GoddessNut/paginas/registro.html" class="nav__link">Registrarse</a></li>
                 <li class="nav__item"><a href="/Web y Mobile/GoddessNut/paginas/iniciarsesion.html" class="nav__link">Iniciar Sesión</a></li>
+                <li class="nav__item"><a href="/Web y Mobile/GoddessNut/paginas/contacto.html" class="nav__link">Contactanos</a></li>
             </ul>
         </div>
         <i class='bx bxs-cart-add nav__cart' ></i>
@@ -44,17 +45,7 @@
 
 </header>
 
-    <!-------Main-------->
-<main class="uno-main">
-    <!-----Inicio---------->
-    <section class="home" id="home">
-        <div class="home__container bd-grid">
-            <div class="home__data">
-                <h1 class="home__title">NUEVOS<br><span>PRODUCTOS</span></h1>
-                <a href="/Web y Mobile/GoddessNut/paginas/productos.html" class="button-shopping">Ir de Shopping</a>
-            </div>
-        </div>
-    </section>
+   
 
    {% block contenido %}
    {% endblock %}

@@ -322,6 +322,11 @@ top: 20px;
 .destacados__container{
     display: flex;
     flex-wrap: wrap;
+    bottom: 20px;
+}
+
+.section-title{
+    left: center;
 }
 
 .productos__destacados{
@@ -338,7 +343,7 @@ top: 20px;
     justify-content: center;
     background-color: var(--pink-color);
     left: 350px;
-    top: 20px;
+    top: 30px;
 }
 
 .nuevos__destacados{

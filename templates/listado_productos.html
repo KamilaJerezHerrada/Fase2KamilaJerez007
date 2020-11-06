@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block contenido %}
+
+<h2>Productos que deseas que lleguen</h2>
+<table>
+    <tr>
+    <tr>Nombre del producto</tr>
+    <tr>Precio</tr>
+    <tr>Cantidad</tr>
+    </tr>
+
+    {% for p in productos %}
+    <tr>
+        <td> {{p.Nombre}}</td>
+        <td> {{p.Precio}}</td>
+        <td> {{p.Cantidad}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}
