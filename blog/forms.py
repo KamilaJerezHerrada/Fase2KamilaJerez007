@@ -3,6 +3,7 @@ from django.forms import ModelForm
 from .models import Contacto
 from .models import Producto
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from .models import Cliente 
 
 class ContactoForm(forms.ModelForm):
@@ -11,14 +12,12 @@ class ContactoForm(forms.ModelForm):
         model = Contacto
         fields = '__all__'
 
-class ProductoForm(ModelForm):
+class ProductoForm(forms.ModelForm):
 
-    model = Producto
-    fields = ['idProducto','nombreProducto', 'precio', 'cantidad', 'stock']
+        model = Producto    
+        fields = '__all__'
 
-class CustomUserCreationForm(UserCreationForm):
+class CreateUserForm(UserCreationForm):
     class Meta:
-        model = Cliente
-        fields = ['nombre', "apellido", "correoElectronico", "direccion", "cuidad", "region", "comuna", "codigoPostal", "numeroTelefono"]
-
-
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
